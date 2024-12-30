@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.content-box {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-section {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    max-width: 200px;
+    height: auto;
+}
+
+.service-title {
+    margin-top: -20px;
+    font-size: 70px;
+    color: #004aad;
+    text-align: center;
+    font-weight: bold;
+}
+
+.text-section {
+    margin-bottom: 30px;
+}
+
+.main-text {
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.divider {
+    height: 2px;
+    background-color: #000000;
+    margin: 30px 0 -2px;
+}
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-text-container {
+    margin-bottom: 20px;
+}
+
+.contact-text-line1, .contact-text-line2 {
+    margin: 0;
+    color: #333;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.contact-text-line2 {
+    margin-top: 8px;
+}
+
+.contact-text {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.email-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.email-link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.email-link:hover {
+    color: #0056b3;
+}
+
+.fa-envelope {
+    color: #007bff;
+    font-size: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .content-box {
+        padding: 20px;
+    }
+
+    .main-text {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .email-link {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-box {
+        padding: 15px;
+    }
+
+    .logo {
+        max-width: 120px;
+    }
+
+    .main-text {
+        font-size: 13px;
+    }
+
+    .contact-text {
+        font-size: 14px;
+    }
+
+    .email-link {
+        font-size: 14px;
+    }
+}
