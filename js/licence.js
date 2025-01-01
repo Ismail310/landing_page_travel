@@ -1,68 +1,13 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//     const selectedLanguage = sessionStorage.getItem('selectedLanguage');
-    
-//     const translations = {
-//         english: {
-//             title: "Enter Your License Key",
-//             placeholder: "Enter license key here",
-//             submitBtn: "Submit",
-//             noLicense: "Don't have a license!",
-//             contactUs: "Contact Us",
-//             priceInfo: "You can get a valid 6-month license for $2300",
-//             successMessage: "License Verified Successfully!",
-//             errorMessage: "Invalid license key!"
-//         },
-//         arabic: {
-//             title: "أدخل مفتاح الترخيص",
-//             placeholder: "أدخل مفتاح الترخيص هنا",
-//             submitBtn: "إرسال",
-//             noLicense: "!لا تمتلك ترخيص",
-//             contactUs: "تواصل بنا",
-//             priceInfo: "يمكنك الحصول على ترخيص صالح 6 شهور مقابل 2300 دولار",
-//             successMessage: "!تم التحقق من الترخيص بنجاح",
-//             errorMessage: "!مفتاح الترخيص غير صالح"
-//         }
-//     };
-
-//     const content = translations[selectedLanguage];
-    
-//     if (content) {
-//         document.querySelector('.licence-text').textContent = content.title;
-//         document.querySelector('.licence-input').placeholder = content.placeholder;
-//         document.querySelector('.submit-btn').textContent = content.submitBtn;
-//         document.querySelector('.no-license').textContent = content.noLicense;
-//         document.querySelector('.contact-us').textContent = content.contactUs;
-//         document.querySelector('.price-info').textContent = content.priceInfo;
-//     }
-
-//     document.querySelector('.submit-btn').addEventListener('click', () => {
-//         const licenseKey = document.querySelector('.licence-input').value;
-//         const successPopup = document.getElementById('successPopup');
-        
-//         if (licenseKey === '123456789') {
-//             successPopup.style.display = 'block';
-//             successPopup.querySelector('p').textContent = content.successMessage;
-            
-//             setTimeout(() => {
-//                 window.location.href = 'travel.html';
-//             }, 3000);
-//         } else {
-//             alert(content.errorMessage);
-//         }
-//     });
-// });
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const selectedLanguage = sessionStorage.getItem('selectedLanguage');
+    document.documentElement.setAttribute('lang', selectedLanguage);
     
     const translations = {
         english: {
             title: "Enter Your License Key",
             placeholder: "Enter license key here",
             submitBtn: "Submit",
-            noLicense: "Don't have a license!",
+            noLicense: "Don't have a license",
             contactUs: "Contact Us",
             priceInfo: "You can get a valid 6-month license for $2300",
             successMessage: "License Verified Successfully!",
@@ -82,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Entrez votre clé de licence",
             placeholder: "Entrez la clé de licence ici",
             submitBtn: "Soumettre",
-            noLicense: "Vous n'avez pas de licence !",
+            noLicense: "Vous n'avez pas de licence ",
             contactUs: "Contactez-nous",
             priceInfo: "Vous pouvez obtenir une licence valide de 6 mois pour 2300 $",
             successMessage: "Licence vérifiée avec succès !",
@@ -92,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Ingrese su clave de licencia",
             placeholder: "Ingrese la clave de licencia aquí",
             submitBtn: "Enviar",
-            noLicense: "¡No tienes licencia!",
+            noLicense: "¡No tienes licencia",
             contactUs: "Contáctenos",
             priceInfo: "Puede obtener una licencia válida de 6 meses por $2300",
             successMessage: "¡Licencia verificada con éxito!",

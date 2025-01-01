@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const selectedLanguage = sessionStorage.getItem('selectedLanguage');
+    document.documentElement.setAttribute('lang', selectedLanguage);
+    
     
     const translations = {
         english: {

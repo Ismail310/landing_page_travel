@@ -63,6 +63,23 @@ body {
     font-weight: bold;
     font-size: 15px;
 }
+[lang="arabic"] .text-container {
+    direction: rtl;
+    text-align: right;
+}
+
+[lang="arabic"] .notice-text {
+    text-align: right;
+}
+
+[lang]:not([lang="arabic"]) .text-container {
+    direction: ltr;
+    text-align: left;
+}
+
+[lang]:not([lang="arabic"]) .notice-text {
+    text-align: left;
+}
 
 .accept-btn {
     position: absolute;
