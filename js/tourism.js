@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
             title: "For Tourism Services",
             mainText: `The tourism program is very important and the first thing you will be asked about when applying for a visa or at border control is the reason for your trip, and the tourism program explains everything.
             Please note that obtaining a visa does not mean approval to enter the country if border officers are not convinced of your reason for entry.
-            The importance of the tourism program lies in facilitating the visa acquisition process or country entry, as it serves as a comprehensive guide demonstrating the traveler's intention for temporary visits for tourism purposes only. The program shows details of the planned trip, including arrival and departure dates, daily activities schedule, and pre-booked accommodations. These details enhance the confidence of visa-granting authorities that the traveler has specific and well-planned intentions, and their purpose is limited to tourism and returning after the trip ends. Additionally, the program helps clarify the traveler's financial ability to cover trip costs, which is considered an important element in visa granting decisions.`,
+            The importance of the tourism program lies in facilitating the visa acquisition process or country entry, as it serves as a comprehensive guide demonstrating the traveler's intention for temporary visits for tourism purposes only. The program shows details of the planned trip, including arrival and departure dates, daily activities schedule, and pre-booked accommodations. These details enhance the confidence of visa-granting authorities that the traveler has specific and well-planned intentions, and their purpose is limited to tourism and returning after the trip ends. Additionally, the program helps clarify the traveler's financial ability to cover trip costs, which is considered an important element in visa granting decisions`,
             contactText1Line1: "We can provide a trip system and help you",
             contactText1Line2: "with all procedures and reservations",
             contactText2: "Contact us via official email",
@@ -78,8 +78,12 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.email-link').href = `mailto:${content.email}`;
 
         // Update HTML lang attribute and direction
-        document.documentElement.lang = language;
-        document.documentElement.dir = language === 'arabic' ? 'rtl' : 'ltr';
+        // document.documentElement.lang = language;
+        // document.documentElement.dir = language === 'arabic' ? 'rtl' : 'ltr';
+        // Update HTML lang attribute and direction
+document.documentElement.lang = language;
+document.documentElement.dir = ['arabic', 'indie'].includes(language) ? 'rtl' : 'ltr';
+
     }
 
     // Initialize when the page loads

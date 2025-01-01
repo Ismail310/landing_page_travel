@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Adam Script Bold';
+    src: url('../fonts/AdamScriptBold.ttf') format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -32,9 +37,25 @@ body {
     margin-bottom: 10px;
 }
 
-.logo {
+/* .logo {
     max-width: 200px;
     height: auto;
+} */
+.logo-text {
+    font-family: 'Adam Script Bold', cursive;
+    font-size: 100px;
+    color: #e42525;
+    margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+    .logo-text {
+        font-size: 80px;
+    }
+}
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 60px;
+    }
 }
 
 .service-title {
@@ -50,11 +71,39 @@ body {
 }
 
 .main-text {
-    line-height: 1.8;
+    line-height: 1.9;
     color: #333;
     text-align: justify;
-    font-size: 22px;
+    font-size: 25px;
     font-weight: bold;
+}
+/* Base styles */
+.main-text {
+    line-height: 1.9;
+    color: #333;
+    text-align: justify;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Media queries - make sure these come after the base styles */
+@media (max-width: 768px) {
+    .main-text {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-text {
+        font-size: 20px;
+    }
+}
+
+
+html:not([lang="arabic"]) .main-text {
+    text-align: left;
+    white-space: normal;
+    padding: 0 8px;
 }
 
 .divider {
@@ -122,13 +171,17 @@ body {
         padding: 20px;
     }
 
-    .main-text {
-        font-size: 22px;
-        font-weight: bold;
-    }
+
 
     .email-link {
         font-size: 16px;
+    }
+    .service-title {
+        font-size: 50px;
+    }
+    html:not([lang="arabic"]) .service-title {
+        margin-top: -10px;
+        font-size: 30px;
     }
 }
 
@@ -141,9 +194,7 @@ body {
         max-width: 120px;
     }
 
-    .main-text {
-        font-size: 13px;
-    }
+
 
     .contact-text {
         font-size: 14px;
