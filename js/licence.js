@@ -1,3 +1,9 @@
+window.onpageshow = function(event) {
+    if (event.persisted) {
+        window.location.reload();
+    }
+};
+s
 document.addEventListener('DOMContentLoaded', () => {
     // Set language and document attributes
     const selectedLanguage = sessionStorage.getItem('selectedLanguage');

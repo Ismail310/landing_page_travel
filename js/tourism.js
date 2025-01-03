@@ -1,3 +1,9 @@
+window.onpageshow = function(event) {
+    if (event.persisted) {
+        window.location.reload();
+    }
+};
+
 // Add smooth scrolling for better user experience
 document.addEventListener('DOMContentLoaded', function() {
     // Translations object for all supported languages

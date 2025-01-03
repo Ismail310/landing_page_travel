@@ -1,3 +1,9 @@
+window.onpageshow = function(event) {
+    if (event.persisted) {
+        window.location.reload();
+    }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     // Clear any existing overlay on page load
     const existingOverlay = document.querySelector('.loading-overlay');
