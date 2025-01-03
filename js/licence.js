@@ -1,11 +1,10 @@
-window.onpageshow = function(event) {
-    if (event.persisted) {
-        window.location.reload();
-    }
-};
-s
 document.addEventListener('DOMContentLoaded', () => {
-    // Set language and document attributes
+    // Hide success dialog on page load
+    const successDialog = document.getElementById('successDialog');
+    if (successDialog) {
+        successDialog.style.display = 'none';
+    }
+
     const selectedLanguage = sessionStorage.getItem('selectedLanguage');
     document.documentElement.setAttribute('lang', selectedLanguage);
     const translations = {
@@ -62,48 +61,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 
     };
 
-    const content = translations[selectedLanguage] || translations.english;
+    const content = translations[selectedLanguage];
     
-    // Update UI elements with translated content
     if (content) {
-        const elements = {
-            '.licence-text': 'title',
-            '.licence-input': 'placeholder',
-            '.submit-btn': 'submitBtn',
-            '.no-license': 'noLicense',
-            '.contact-us': 'contactUs',
-            '.price-info': 'priceInfo'
-        };
-
-        Object.entries(elements).forEach(([selector, contentKey]) => {
-            const element = document.querySelector(selector);
-            if (element) {
-                if (selector === '.licence-input') {
-                    element.placeholder = content[contentKey];
-                } else {
-                    element.textContent = content[contentKey];
-                }
-            }
-        });
+        document.querySelector('.licence-text').textContent = content.title;
+        document.querySelector('.licence-input').placeholder = content.placeholder;
+        document.querySelector('.submit-btn').textContent = content.submitBtn;
+        document.querySelector('.no-license').textContent = content.noLicense;
+        document.querySelector('.contact-us').textContent = content.contactUs;
+        document.querySelector('.price-info').textContent = content.priceInfo;
     }
 
-    // Handle license submission
     document.querySelector('.submit-btn').addEventListener('click', () => {
         const licenseKey = document.querySelector('.licence-input').value;
         const successDialog = document.getElementById('successDialog');
-
+        
         if (licenseKey === 'HS751K182H') {
-            // Show success message
+            // Show success dialog only on successful submit
             successDialog.style.display = 'block';
             successDialog.querySelector('p').textContent = content.successMessage;
             
-            // Create loading overlay for navigation
-            const loadingOverlay = document.createElement('div');
-            loadingOverlay.className = 'loading-overlay';
-            loadingOverlay.innerHTML = '<div class="loading-spinner"></div>';
-            document.body.appendChild(loadingOverlay);
-            
-            // Navigate after delay
             setTimeout(() => {
                 window.location.href = 'travel.html';
             }, 3000);
