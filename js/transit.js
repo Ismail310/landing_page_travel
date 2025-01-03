@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const existingOverlay = document.querySelector('.loading-overlay');
+    if (existingOverlay) {
+        existingOverlay.remove();
+    }
+
     const selectedLanguage = sessionStorage.getItem('selectedLanguage');
     
     const translations = {
@@ -53,6 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     buttons.forEach((button, index) => {
         button.addEventListener('click', () => {
+            // Remove any existing overlay before creating new one
+            const existingOverlay = document.querySelector('.loading-overlay');
+            if (existingOverlay) {
+                existingOverlay.remove();
+            }
+
+            // Create new loading overlay
             const loadingOverlay = document.createElement('div');
             loadingOverlay.className = 'loading-overlay';
             loadingOverlay.innerHTML = '<div class="loading-spinner"></div>';

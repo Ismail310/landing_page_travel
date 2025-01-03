@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
             contactText1Line1: "We can provide a trip system and help you",
             contactText1Line2: "with all procedures and reservations",
             contactText2: "Contact us via official email",
-            email: "your.email@example.com"
+            email: "info@piblikhub.com"
         },
         arabic: {
             title: "للخدمات السياحية",

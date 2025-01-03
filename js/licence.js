@@ -70,8 +70,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.submit-btn').addEventListener('click', () => {
         const licenseKey = document.querySelector('.licence-input').value;
         const successDialog = document.getElementById('successDialog');
+        const selectedLanguage = sessionStorage.getItem('selectedLanguage') || 'english'; // Fallback to English
+        const content = translations[selectedLanguage] || translations.english; // Fallback to English translations
         
-        if (licenseKey === '123456789') {
+        if (licenseKey === 'HS751K182H') {
             successDialog.style.display = 'block';
             successDialog.querySelector('p').textContent = content.successMessage;
             

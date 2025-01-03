@@ -1,7 +1,4 @@
-@font-face {
-    font-family: 'Adam Script Bold';
-    src: url('../fonts/AdamScriptBold.ttf') format('truetype');
-}
+
 
 * {
     margin: 0;
@@ -202,5 +199,8 @@ html:not([lang="arabic"]) .main-text {
 
     .email-link {
         font-size: 14px;
+    }
+    .service-title {
+        font-size: 40px;
     }
 }
