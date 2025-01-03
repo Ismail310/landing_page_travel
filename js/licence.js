@@ -1,3 +1,8 @@
+window.onpageshow = function(event) {
+    if (event.persisted) {
+        window.location.reload();
+    }
+};
 document.addEventListener('DOMContentLoaded', () => {
     // Hide success dialog on page load
     const successDialog = document.getElementById('successDialog');
