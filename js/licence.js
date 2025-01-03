@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn: "Submit",
             noLicense: "Don't have a license",
             contactUs: "Contact Us",
-            priceInfo: "You can get a valid 6-month license for $2300",
+            priceInfo: "You can get a valid 6-month license for 2300 Dollares",
             successMessage: "License Verified Successfully!",
             errorMessage: "Invalid license key!"
         },
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn: "Soumettre",
             noLicense: "Vous n'avez pas de licence ",
             contactUs: "Contactez-nous",
-            priceInfo: "Vous pouvez obtenir une licence valide de 6 mois pour 2300 $",
+            priceInfo: "Vous pouvez obtenir une licence valide de 6 mois pour 2300 Dollares",
             successMessage: "Licence vérifiée avec succès !",
             errorMessage: "Clé de licence invalide !"
         },        
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn: "Enviar",
             noLicense: "¡No tienes licencia",
             contactUs: "Contáctenos",
-            priceInfo: "Puede obtener una licencia válida de 6 meses por $2300",
+            priceInfo: "Puede obtener una licencia válida de 6 meses por 2300 Dollares",
             successMessage: "¡Licencia verificada con éxito!",
             errorMessage: "¡Clave de licencia no válida!"
         },
