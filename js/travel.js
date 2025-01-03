@@ -1,10 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Clear any existing overlay on page load
     const existingOverlay = document.querySelector('.loading-overlay');
     if (existingOverlay) {
         existingOverlay.remove();
     }
+
+    // Get selected language from session storage
     const selectedLanguage = sessionStorage.getItem('selectedLanguage');
     
+    // Define translations for all supported languages
     const translations = {
         english: {
             flightBooking: "Flight Booking",
@@ -38,16 +42,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    // Get content for selected language
     const content = translations[selectedLanguage];
     const buttons = document.querySelectorAll('.lang-btn');
     
+    // Update button text if content exists
     if (content) {
-        buttons[0].textContent = content.flightBooking;
-        buttons[1].textContent = content.visaTransit;
-        buttons[2].textContent = content.hotelReservation;
-        buttons[3].textContent = content.tourismProgram;
+        const buttonTexts = ['flightBooking', 'visaTransit', 'hotelReservation', 'tourismProgram'];
+        buttonTexts.forEach((key, index) => {
+            buttons[index].textContent = content[key];
+        });
     }
 
+    // Define destination URLs
     const destinations = {
         flightBooking: "https://www.aircanada.com/home/us/en/aco/flights",
         visaTransit: "transit.html",
@@ -55,22 +62,19 @@ document.addEventListener('DOMContentLoaded', () => {
         tourismProgram: "tourism.html"
     };
 
+    // Add click handlers to buttons
     buttons.forEach((button, index) => {
         button.addEventListener('click', () => {
-            // Remove any existing overlay before creating new one
-            const existingOverlay = document.querySelector('.loading-overlay');
-            if (existingOverlay) {
-                existingOverlay.remove();
-            }
-
-            // Create new loading overlay
+            // Create loading overlay only when button is clicked
             const loadingOverlay = document.createElement('div');
             loadingOverlay.className = 'loading-overlay';
             loadingOverlay.innerHTML = '<div class="loading-spinner"></div>';
             document.body.appendChild(loadingOverlay);
 
+            // Get destination URL based on button index
             const destination = Object.values(destinations)[index];
             
+            // Navigate after delay
             setTimeout(() => {
                 window.location.href = destination;
             }, 1500);

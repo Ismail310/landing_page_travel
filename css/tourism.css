@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 * {
     margin: 0;
@@ -39,7 +39,7 @@ body {
     height: auto;
 } */
 .logo-text {
-    font-family: 'Adam Script Bold', cursive;
+    font-family: 'Montserrat';
     font-size: 100px;
     color: #e42525;
     margin-bottom: 15px;
